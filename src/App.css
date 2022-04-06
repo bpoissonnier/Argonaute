@@ -1,38 +1,92 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --color-primary: #f76c6c;
+  --color-secondary: #f4f4f4;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  min-width: 50%;
+  max-width: 65%;
+  margin: 0 auto;
+}
+
+header {
+  background: var(--color-secondary);
+  text-align: center;
+  padding: 2em;
+}
+
+header img {
+  max-width: 96px;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+h1,
+h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label {
+  display: block;
+  margin-bottom: 0.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.new-member-form,
+.member-list {
+  margin: 2em 0 4em 0;
+  text-align: center;
+}
+
+.member-list {
+  column-count: 3;
+}
+
+.member-item {
+  padding: 0.25em 0;
+}
+
+footer {
+  margin-top: 2em;
+  text-align: center;
+  color: #fff;
+  background: var(--color-primary);
+  padding: 0.25em 0;
+}
+
+/* .btn {
+  width: 100%;
+  min-width: 150px;
+}
+
+.btn {
+  background-color: var(--color-primary);
+  border: var(--color-primary);
+}
+
+.btn:hover {
+  background-color: var(--color-secondary);
+  border: var(--color-secondary);
+  color: var(--color-primary);
+} */
+
+
+/* mobile format */
+
+@media screen and (max-width: 576px) {
+  .btn {
+    min-width: 100%;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .member-list {
+    column-count: 2;
   }
 }
